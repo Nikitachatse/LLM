@@ -2,5 +2,6 @@
 base="dark"  # or "light"
 primaryColor="#FF4B4B"
 backgroundColor="#1B1B1B"
-secondaryBackgroundColor="#262730"
+secondaryBackgroundColor="#E4E6F5"
+textColor="#FFFFFF"
 font="truenorg"
