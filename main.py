@@ -59,15 +59,15 @@ if "conversation" not in st.session_state:
     # Boto3 client
     client = boto3.client(
         service_name="bedrock-runtime",
-        region_name=os.getenv("REGION_NAME"),
-        aws_access_key_id=os.getenv("ACCESS_KEY"),
-        aws_secret_access_key=os.getenv("SECRET_KEY"),
+        region_name=st.secrets["aws"]["REGION_NAME"],
+        aws_access_key_id=st.secrets["aws"]["ACCESS_KEY"],
+        aws_secret_access_key=st.secrets["aws"]["SECRET_KEY"],
         config=config
     )
 
     # LangChain ChatBedrock LLM
     llm = ChatBedrock(
-        model_id=os.getenv("MODEL_ID"),
+        model_id=st.secrets["aws"]["MODEL_ID"],
         client=client,
         model_kwargs={"temperature": 0, "max_tokens": 8192},
         streaming=True
