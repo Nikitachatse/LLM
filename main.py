@@ -52,7 +52,7 @@ load_dotenv("credentials.env")
 config = Config(retries={"max_attempts": 10, "mode": "standard"})
 
 # --- Streamlit UI Title ---
-st.title("Hello, Welcome To SQL-LLM")
+st.title("Hello, Welcome To EXEQMODE MetaChat")
 
 # --- Initialize Bedrock + LangChain in Session State ---
 if "conversation" not in st.session_state:
